@@ -10,7 +10,7 @@
             </div>
             {% endif %} {% endwith %}
         </div>
-        <form class="sign-up-form form" method="post" action="{{ url_for('auth.login') }}">
+        <form class="sign-up-form form" method="get" action="{{ url_for('auth.login') }}">
             {{ form.hidden_tag() }} {{ form.csrf_token() }}
             <div class="form-label-wrapper">
                 {{ form.username.label (class="form-label")}}
@@ -36,4 +36,4 @@
         </form>
     </article>
 </main>
-{% endblock %}
+{% endblock content%}
